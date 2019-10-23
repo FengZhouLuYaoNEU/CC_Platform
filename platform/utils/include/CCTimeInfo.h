@@ -3,6 +3,7 @@
 #include <cstdint>
 #include <string>
 using std::uint32_t;
+using std::uint64_t;
 namespace CCPlatform
 {
     //************************************
@@ -15,21 +16,21 @@ namespace CCPlatform
     //************************************
     bool is_leap_year(uint32_t year);
     //************************************
+    // Method:    s_timestamp_to_str_date
+    // FullName:  CCPlatform::s_timestamp_to_str_date
+    // Access:    public 
+    // Returns:   std::string
+    // Qualifier:
+    // Parameter: uint64_t timestamp
+    //************************************
+    std::string s_timestamp_to_str_date(uint64_t timestamp);
+    //************************************
     // Method:    ms_timestamp_to_str_date
     // FullName:  CCPlatform::ms_timestamp_to_str_date
     // Access:    public 
     // Returns:   std::string
     // Qualifier:
-    // Parameter: std::uint64_t timestamp
+    // Parameter: uint64_t timestamp
     //************************************
-    std::string ms_timestamp_to_str_date(std::uint64_t timestamp);
-    //************************************
-    // Method:    us_timestamp_to_str_date
-    // FullName:  CCPlatform::us_timestamp_to_str_date
-    // Access:    public 
-    // Returns:   std::string
-    // Qualifier:
-    // Parameter: std::uint64_t timestamp
-    //************************************
-    std::string us_timestamp_to_str_date(std::uint64_t timestamp);
+    std::string ms_timestamp_to_str_date(uint64_t timestamp);
 }
