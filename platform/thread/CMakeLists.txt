@@ -5,8 +5,8 @@ project (module_thread)
 include (../head.cmake)
 
 #include dir
+include_directories(../shared/include)
 include_directories(./include)
-
 #link dir
 #link_directories()
 

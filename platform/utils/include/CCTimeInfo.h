@@ -1,7 +1,7 @@
 #pragma once
 #include <ctime>
-#include <cstdint>
 #include <string>
+#include "CCErrorNo.h"
 using std::uint32_t;
 using std::uint64_t;
 namespace CCPlatform

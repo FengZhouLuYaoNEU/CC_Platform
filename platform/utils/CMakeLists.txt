@@ -5,6 +5,7 @@ project (module_util)
 include (../head.cmake)
 
 #include dir
+include_directories(../shared/include)
 include_directories(./include)
 
 #link dir
