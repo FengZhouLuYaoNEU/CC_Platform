@@ -34,13 +34,4 @@ namespace CCPlatform
         }
     }
 
-    template <class F>
-    void fixed_thread_pool::execute(F&& task)
-    {
-        {
-            std::lock_guard<std::mutex> lk(data_->mtx_);
-            data_->tasks_.emplace(std::forward<F>(task));
-        }
-        data_->cond_.notify_one();
-    }
 }

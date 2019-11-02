@@ -33,3 +33,4 @@
 # proj conf
 /platform/utils/build/*
 /platform/thread/build/*
+/test

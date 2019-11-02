@@ -51,7 +51,14 @@ namespace CCPlatform
         // Parameter: F & & task
         //************************************
         template <class F>
-        void execute(F&& task);
+        void execute(F&& task)
+        {
+            {
+                std::lock_guard<std::mutex> lk(data_->mtx_);
+                data_->tasks_.emplace(std::forward<F>(task));
+            }   
+            data_->cond_.notify_one();
+        }
     private:
         struct data
         {
